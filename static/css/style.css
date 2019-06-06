@@ -1,7 +1,9 @@
 .navbar-transparent {
     background-color: transparent;
 }
-
+.select2-container .select2-selection--single{
+    outline: 0;
+}
 .select2-container--default .select2-selection--single {
     border-color: #DCDEE0;
     height: 50px;
