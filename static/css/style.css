@@ -830,9 +830,11 @@ select{
 
 /*********页面主要部分表单相关*************/
 .body-column {
-    max-width: 460px;
     margin: 0 auto 50px auto;
     overflow: hidden;
+}
+.body-column.width-sm{
+    max-width: 460px;
 }
 
 .body-column h3 {

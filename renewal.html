@@ -12,11 +12,8 @@
 </head>
 <body>
 <div class="sidebar">
-    <a href="/super/ss">
-    </a>
-    <a href="/super/ss">
-        我的帐号
-    </a>
+    <a href="/" title="首页"></a>
+    <a href="/">我的帐号</a>
     <a href="/super/ss-renewal">
         续费管理
     </a>
@@ -78,8 +75,8 @@
                 <li class="nav-item"><a class="active" data-toggle="list" href="#list-profile" role="tab">个人信息</a></li>
                 <li class="nav-item"><a data-toggle="list" href="#list-avatar" role="tab">修改头像</a></li>
                 <li class="nav-item"><a data-toggle="list" href="#list-password" role="tab">修改密码</a></li>
-                <li class="nav-item"><a data-toggle="list" href="#list-home" role="tab">修改邮箱</a></li>
-                <li class="nav-item"><a data-toggle="list" href="#list-home" role="tab">登录日志</a></li>
+                <li class="nav-item"><a data-toggle="list" href="#list-email" role="tab">修改邮箱</a></li>
+                <li class="nav-item"><a data-toggle="list" href="#list-log" role="tab">登录日志</a></li>
                 <li class="nav-item"><a data-toggle="list" href="#list-home" role="tab">消息通知</a></li>
             </ul>
         </div>
@@ -88,7 +85,7 @@
 <div class="content-menu-line"></div>
 <div class="content-body container">
     <div class="tab-content">
-        <div class="row body-column tab-pane fade show active" id="list-profile">
+        <div class="row body-column width-sm tab-pane fade show active" id="list-profile">
             <h3>信息详情</h3>
             <form method="post">
                 <label class="body-column-label w-50">
@@ -396,7 +393,7 @@
                 <button type="button" class="w-100 btn btn-primary btn-lg">保存变更</button>
             </form>
         </div>
-        <div class="row body-column tab-pane" id="list-avatar" style="max-width: 100%">
+        <div class="row body-column tab-pane" id="list-avatar">
             <h3>修改头像</h3>
             <div class="panel-title">当前头像</div>
             <div class="row">
@@ -413,32 +410,390 @@
                          src="https://letslook.net/uploads/avatar/2017/12/25/465_1514186520_small.jpg" alt="头像小图">
                 </div>
             </div>
-            <div class="panel-title">选中头像</div>
-            <label class="body-column-label w-100" id="ticketAttachments">
-                <span class="form-label-title">Attach File ( Max file size is 4.1 MB )</span>
-                <input type="file" name="attachment[]" size="45" onchange="ticketAttachmentChange(this);" class="form-input-control">
-            </label>
+            <div class="panel-title">选择头像</div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                        <label class="custom-file-label" for="validatedCustomFile">选择头像</label>
+                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <button type="submit" class="w-100 btn btn-primary btn-lg">保存</button>
+                </div>
+            </div>
         </div>
-        <div class="row body-column tab-pane" id="list-password">
+        <div class="row body-column width-sm tab-pane" id="list-password">
             <h3>修改密码</h3>
             <form method="post">
                 <label class="body-column-label w-100">
-                    <span class="form-label-title">Current Password</span>
-                    <input type="password" name="current_password" placeholder="Current Password" required
-                           class="form-input-control">
+                    <span class="form-label-title">旧密码</span>
+                    <input type="password" name="current_password" placeholder="旧密码" required class="form-input-control">
                 </label>
                 <label class="body-column-label w-100">
-                    <span class="form-label-title">New Password</span>
-                    <input type="password" name="password1" placeholder="New Password" required=""
-                           class="form-input-control">
+                    <span class="form-label-title">新密码</span>
+                    <input type="password" name="password1" placeholder="新密码" required class="form-input-control">
                 </label>
                 <label class="body-column-label w-100">
-                    <span class="form-label-title">Confirm New Password</span>
-                    <input type="password" name="password2" placeholder="Confirm New Password" required=""
-                           class="form-input-control">
+                    <span class="form-label-title">确认密码</span>
+                    <input type="password" name="password2" placeholder="确认密码" required class="form-input-control">
                 </label>
                 <button type="submit" class="w-100 btn btn-primary btn-lg">保存</button>
             </form>
+        </div>
+        <div class="row body-column width-sm tab-pane" id="list-email">
+            <h3>修改邮箱</h3>
+            <form method="post">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <label>当前邮箱</label><div class="form-control-static">
+                        longfei6671@163.com</div>
+                    </div>
+                </div>
+
+                <label class="body-column-label w-100">
+                    <span class="form-label-title">新邮箱地址</span>
+                    <input type="email" name="email" placeholder="新邮箱地址" required class="form-input-control">
+                    <p class="help-block help-block-error"></p>
+                </label>
+                <label class="body-column-label w-100">
+                    <span class="form-label-title">确认新邮箱地址</span>
+                    <input type="email" name="confirm_email" placeholder="确认新邮箱地址" required class="form-input-control">
+                </label>
+                <button type="submit" class="w-100 btn btn-primary btn-lg">保存</button>
+            </form>
+        </div>
+        <div class="row body-column tab-pane" id="list-log">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-3"> 登录时间</div>
+                        <div class="col-md-2"> IP地址</div>
+                        <div class="col-md-4"> 参考地点</div>
+                        <div class="col-md-3"> 登录业务</div>
+                    </div>
+                </div>
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2019-06-03 11:05:34
+                            </div>
+                            <div class="col-md-2">
+                                106.38.49.*
+                            </div>
+                            <div class="col-md-4">
+                                北京市 电信互联网数据交换中心
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2019-06-03 11:05:33
+                            </div>
+                            <div class="col-md-2">
+                                106.38.49.*
+                            </div>
+                            <div class="col-md-4">
+                                北京市 电信互联网数据交换中心
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2019-06-01 14:55:07
+                            </div>
+                            <div class="col-md-2">
+                                114.244.245.*
+                            </div>
+                            <div class="col-md-4">
+                                北京市 联通
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（WIN Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2019-06-01 14:55:07
+                            </div>
+                            <div class="col-md-2">
+                                114.244.245.*
+                            </div>
+                            <div class="col-md-4">
+                                北京市 联通
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（WIN Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2019-04-01 17:54:59
+                            </div>
+                            <div class="col-md-2">
+                                111.207.137.*
+                            </div>
+                            <div class="col-md-4">
+                                北京市 联通
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2019-04-01 17:54:59
+                            </div>
+                            <div class="col-md-2">
+                                111.207.137.*
+                            </div>
+                            <div class="col-md-4">
+                                北京市 联通
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2019-04-01 17:51:37
+                            </div>
+                            <div class="col-md-2">
+                                152.195.117.*
+                            </div>
+                            <div class="col-md-4">
+                                美国
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2019-04-01 17:51:37
+                            </div>
+                            <div class="col-md-2">
+                                152.195.117.*
+                            </div>
+                            <div class="col-md-4">
+                                美国
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2019-01-20 11:25:39
+                            </div>
+                            <div class="col-md-2">
+                                152.195.117.*
+                            </div>
+                            <div class="col-md-4">
+                                美国
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（WIN Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2019-01-20 11:25:39
+                            </div>
+                            <div class="col-md-2">
+                                152.195.117.*
+                            </div>
+                            <div class="col-md-4">
+                                美国
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（WIN Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2018-12-02 15:53:42
+                            </div>
+                            <div class="col-md-2">
+                                183.240.196.*
+                            </div>
+                            <div class="col-md-4">
+                                广东省深圳市 移动
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（WIN Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2018-12-02 15:53:42
+                            </div>
+                            <div class="col-md-2">
+                                183.240.196.*
+                            </div>
+                            <div class="col-md-4">
+                                广东省深圳市 移动
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（WIN Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2018-11-21 09:48:10
+                            </div>
+                            <div class="col-md-2">
+                                152.195.189.*
+                            </div>
+                            <div class="col-md-4">
+                                美国
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2018-11-21 09:48:10
+                            </div>
+                            <div class="col-md-2">
+                                152.195.189.*
+                            </div>
+                            <div class="col-md-4">
+                                美国
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2018-11-21 09:46:09
+                            </div>
+                            <div class="col-md-2">
+                                210.12.136.*
+                            </div>
+                            <div class="col-md-4">
+                                新疆乌鲁木齐市 联通
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2018-11-21 09:46:09
+                            </div>
+                            <div class="col-md-2">
+                                210.12.136.*
+                            </div>
+                            <div class="col-md-4">
+                                新疆乌鲁木齐市 联通
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2018-08-09 10:57:50
+                            </div>
+                            <div class="col-md-2">
+                                210.12.136.*
+                            </div>
+                            <div class="col-md-4">
+                                新疆乌鲁木齐市 联通
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2018-07-09 11:39:09
+                            </div>
+                            <div class="col-md-2">
+                                124.127.252.*
+                            </div>
+                            <div class="col-md-4">
+                                北京市 中国电信北京研究院
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（MAC Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2018-06-15 17:26:21
+                            </div>
+                            <div class="col-md-2">
+                                123.118.21.*
+                            </div>
+                            <div class="col-md-4">
+                                北京市 联通
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（WIN Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                2018-04-29 09:28:38
+                            </div>
+                            <div class="col-md-2">
+                                119.165.190.*
+                            </div>
+                            <div class="col-md-4">
+                                山东省青岛市 联通
+                            </div>
+                            <div class="col-md-3">
+                                电脑网页 <span class="text-muted">（WIN Chrome）</span></div>
+                        </div>
+                    </div>
+                    <div class="panel-footer text-center">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
