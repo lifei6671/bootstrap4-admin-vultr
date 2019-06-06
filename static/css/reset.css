@@ -1,0 +1,424 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/raleway_300.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/raleway_500.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/raleway_700.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Material-Design-Iconic-Font';
+    src: url('/static/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0') format('woff2'),
+    url('/static/fonts/Material-Design-Iconic-Font.woff?v=2.2.0') format('woff'),
+    url('/static/fonts/Material-Design-Iconic-Font.ttf?v=2.2.0') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Material-Design-Iconic-Font';
+    src: url('/static/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0') format('woff2'),
+    url('/static/fonts/Material-Design-Iconic-Font.woff?v=2.2.0') format('woff'),
+    url('/static/fonts/Material-Design-Iconic-Font.ttf?v=2.2.0') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icons';
+    src: url('/static/fonts/icons.ttf?v=7') format('truetype'),
+    url('/static/fonts/icons.woff?v=7') format('woff'),
+    url('/static/fonts/icons.svg?v=7') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icons_2';
+    src: url('/static/fonts/icons_2.eot?v=2');
+    src: url('/static/fonts/icons_2.eot?v=2#iefix') format('embedded-opentype'),
+    url('/static/fonts/icons_2.ttf?v=2') format('truetype'),
+    url('/static/fonts/icons_2.woff?v=2') format('woff'),
+    url('/static/fonts/icons_2.svg?v=2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0 0 0 110px;
+    color: #616366;
+    font-family: "Raleway",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px
+}
+
+* {
+    box-sizing: border-box
+}
+
+a,a:link,a:visited,a:active,a:hover {
+    color: #0084df;
+    text-decoration: none
+}
+
+input:focus,textarea:focus,select:focus {
+    outline: 0 !important
+}
+
+input[type=text],input[type=file],input[type=password],input[type=email],select {
+    border: 1px solid #dcdee0;
+    vertical-align: middle;
+    border-radius: 3px;
+    height: 50px;
+    padding: 0 16px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff
+}
+
+textarea {
+    border: 1px solid #dcdee0;
+    vertical-align: middle;
+    border-radius: 3px;
+    height: 50px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff
+}
+
+input[type=file] {
+    height: auto;
+    padding: 15px 16px
+}
+
+input[type=text]:focus,input[type=file]:focus,input[type=password]:focus,input[type=email]:focus,select:focus {
+    border-color: #1e88e5
+}
+
+input[type=text][readonly],input[type=file][readonly],input[type=password][readonly],input[type=email][readonly],input[type=text][readonly],input[type=text]:disabled,input[type=file]:disabled,input[type=password]:disabled,input[type=email]:disabled,input[type=text]:disabled {
+    background-color: #eee
+}
+
+input[type=text].alternate {
+    background-color: rgba(0,0,0,.2);
+    border-width: 0;
+    vertical-align: middle;
+    border-radius: 3px;
+    padding: 17px 12px 16px;
+    color: #fff
+}
+
+input[type=submit],input[type=button],.button,a.button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 12px 24px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1e88e5;
+    border-radius: 3px;
+    border: none;
+    -webkit-appearance: none;
+    transition: all ease-in .1s
+}
+
+a.button {
+    padding: 13px 24px
+}
+
+input[type=submit]:hover,input[type=submit]:focus,input[type=submit]:active,input[type=button]:hover,input[type=button]:focus,input[type=button]:active,.button:hover,.button:focus,.button:active {
+    background-color: #3ba3ff
+}
+
+.button[disabled] {
+    cursor: not-allowed;
+    opacity: .5
+}
+
+input[type=submit]:disabled,input[type=button]:disabled {
+    background-color: #eee;
+    color: #aaa
+}
+
+.btn-block {
+    display: block;
+    width: 100%
+}
+
+input[type=submit].btn-light,input[type=button].btn-light,.btn-light,a.btn-light {
+    background-color: #3ba3ff
+}
+
+input[type=submit].btn-light:hover,input[type=submit].btn-light:focus,input[type=submit].btn-light:active,input[type=button].btn-light:hover,input[type=button].btn-light:focus,input[type=button].btn-light:active,.btn-light:hover,.btn-light:focus,.btn-light:active,a.btn-light:hover,a.btn-light:focus,a.btn-light:active {
+    background-color: #54aaff
+}
+
+input[type=submit].btn-danger,input[type=button].btn-danger,.btn-danger,a.btn-danger {
+    background-color: #c12e2a
+}
+
+input[type=submit].btn-danger:hover,input[type=submit].btn-danger:focus,input[type=submit].btn-danger:active,input[type=button].btn-danger:hover,input[type=button].btn-danger:focus,input[type=button].btn-danger:active,.btn-danger:hover,.btn-danger:focus,.btn-danger:active,a.btn-danger:hover,a.btn-danger:focus,a.btn-danger:active {
+    background-color: #d13632
+}
+
+input[type=submit].btn-warning,input[type=button].btn-warning,.btn-warning,a.btn-warning {
+    background-color: #eb9316
+}
+
+input[type=submit].btn-warning:hover,input[type=submit].btn-warning:focus,input[type=submit].btn-warning:active,input[type=button].btn-warning:hover,input[type=button].btn-warning:focus,input[type=button].btn-warning:active,.btn-warning:hover,.btn-warning:focus,.btn-warning:active,a.btn-warning:hover,a.btn-warning:focus,a.btn-warning:active {
+    background-color: #ffa92d
+}
+
+input[type=submit].btn-alternate,input[type=button].btn-alternate,.btn-alternate,a.btn-alternate {
+    background-color: #fff;
+    border: 1px solid #1e88e5;
+    color: #1e88e5
+}
+
+input[type=submit].btn-alternate:hover,input[type=submit].btn-alternate:focus,input[type=submit].btn-alternate:active,input[type=button].btn-alternate:hover,input[type=button].btn-alternate:focus,input[type=button].btn-alternate:active,.btn-alternate:hover,.btn-alternate:focus,.btn-alternate:active,a.btn-alternate:hover,a.btn-alternate:focus,a.btn-alternate:active {
+    background-color: #1e88e5;
+    color: #fff
+}
+
+input[type=submit].btn-default,input[type=button].btn-default,.btn-default,a.btn-default {
+    background-color: #dfe2e5;
+    border: 1px solid #dfe2e5;
+    color: #616366
+}
+
+input[type=submit].btn-default:hover,input[type=submit].btn-default:focus,input[type=submit].btn-default:active,input[type=button].btn-default:hover,input[type=button].btn-default:focus,input[type=button].btn-default:active,.btn-default:hover,.btn-default:focus,.btn-default:active,a.btn-default:hover,a.btn-default:focus,a.btn-default:active {
+    background-color: #ebeff2;
+    color: #616366
+}
+
+.panel-block .btn-default {
+    background-color: transparent
+}
+
+input[type=submit].btn_small,input[type=button].btn_small,.btn_small {
+    padding: 9px 10px;
+    font-size: 12px;
+    line-height: 19px
+}
+
+input[type=submit].btn-outline,input[type=button].btn-outline,.btn-outline,a.btn-outline {
+    background-color: transparent;
+    border: 1px solid #e6e9eb;
+    color: #616366
+}
+
+input[type=submit].btn-outline:hover,input[type=submit].btn-outline:focus,input[type=submit].btn-outline:active,input[type=button].btn-outline:hover,input[type=button].btn-outline:focus,input[type=button].btn-outline:active,.btn-outline:hover,.btn-outline:focus,.btn-outline:active,a.btn-outline:hover,a.btn-outline:focus,a.btn-outline:active {
+    background-color: transparent;
+    border-color: #1e88e5;
+    color: #616366
+}
+
+.radiolabeldisc {
+    display: none
+}
+
+.radiolabeldisc+label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 31px;
+    margin: 10px 0
+}
+
+.radiolabeldisc+label:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -12px;
+    font-family: "Material-Design-Iconic-Font";
+    font-weight: 400;
+    font-size: 24px;
+    color: #cacdcf;
+    content: "\f26c"
+}
+
+.radiolabeldisc:checked+label:before {
+    content: "\f26f";
+    color: #1e88e5
+}
+
+.radiolabelbutton {
+    display: none
+}
+
+.radiolabelbutton+label {
+    font-size: 15px;
+    color: #616366;
+    font-weight: 500;
+    line-height: 54px;
+    height: 54px;
+    margin-bottom: 5px;
+    display: inline-block;
+    border: 1px solid #e6e9eb;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip
+}
+
+.radiolabelbutton+label:hover {
+    border-color: #1e88e5
+}
+
+.radiolabelbutton:checked+label {
+    color: #fff;
+    border: none;
+    background: linear-gradient(45deg,#135fac 1%,#1e88e5 64%,#1e87e3 97%)
+}
+
+label.checkboxlabelbtn {
+    font-size: 13px;
+    color: #616366;
+    font-weight: 300;
+    line-height: 54px;
+    height: 54px;
+    margin-bottom: 15px;
+    display: inline-block;
+    border: 1px solid #dcdee0;
+    border-radius: 3px;
+    padding: 0 24px
+}
+
+label.checkboxlabelbtn>input {
+    vertical-align: middle;
+    position: relative;
+    bottom: 3px;
+    margin-right: 3px
+}
+
+label.checkboxlabeltext {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    color: #616366
+}
+
+label.checkboxlabeltext>input {
+    position: relative;
+    top: 1px
+}
+
+input.checkboxtoggleonoff {
+    display: none
+}
+
+input.checkboxtoggleonoff+label {
+    position: relative;
+    display: block;
+    width: 46px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 5px;
+    border-radius: 12px;
+    margin: 8px 0;
+    cursor: pointer;
+    font-size: 10px;
+    text-align: right;
+    color: #8d8d8d;
+    background-color: #dadfe5;
+    transition: all ease .3s
+}
+
+input.checkboxtoggleonoff+label:before {
+    content: "OFF"
+}
+
+input.checkboxtoggleonoff+label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    height: 18px;
+    width: 18px;
+    border-radius: 9px;
+    background-color: #fff;
+    transition: all ease .3s
+}
+
+input.checkboxtoggleonoff:checked+label {
+    background-color: #1e88e5;
+    color: #fff;
+    text-align: left
+}
+
+input.checkboxtoggleonoff:checked+label:before {
+    content: "ON"
+}
+
+input.checkboxtoggleonoff:checked+label:after {
+    left: 26px
+}
+
+input.checkboxcheckmark {
+    display: none
+}
+
+input.checkboxcheckmark+label {
+    line-height: 24px;
+    cursor: pointer
+}
+
+input.checkboxcheckmark+label:before {
+    content: "\f279";
+    vertical-align: top;
+    margin-right: 10px;
+    font-size: 24px;
+    font-family: Material-Design-Iconic-Font;
+    color: #cacdcf;
+    transition: all ease .3s
+}
+
+input.checkboxcheckmark+label:hover:before {
+    color: #1e88e5
+}
+
+input.checkboxcheckmark:checked+label:before {
+    content: "\f26a";
+    color: #1e88e5
+}
+
+input.checkboxcheckmark:disabled+label:before {
+    color: #eaedef
+}
+
+input.checkboxcheckmark:disabled+label:hover:before {
+    color: #eaedef;
+    cursor: default
+}
+
+input.checkboxcheckmark:disabled+label {
+    color: #aaadaf
+}
+
+input.checkboxcheckmark:disabled+label>a {
+    color: #2691d9
+}
