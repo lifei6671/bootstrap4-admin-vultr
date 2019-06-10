@@ -12,7 +12,7 @@
 <body>
 <div class="sidebar">
     <a href="/" title="首页"></a>
-    <a href="/" class="active">我的帐号</a>
+    <a href="/">我的帐号</a>
     <a href="/renewal.html">续费管理</a>
     <a href="/pay.html">我的余额</a>
     <a href="/ticket.html">我的工单</a>
@@ -54,8 +54,7 @@
 </div>
 <div class="content-title">
     <div class="left">
-        <h1>我的帐号</h1>
-        <span class="sub-text">admin@163.com</span>
+        <h1>我的消息</h1>
     </div>
     <div class="right">
 
@@ -65,9 +64,10 @@
     <div class="tabs-responsive">
         <div class="tabs-container">
             <ul class="nav nav-tabs">
-                <li id="tabl_billingaddfunds" class="active"><a href="/billing/#billingaddfunds">Make Payment</a></li>
-                <li id="tabl_billinglimits"><a href="/billing/#billinglimits">Limits</a></li>
-                <li id="tabl_billinghistory"><a href="/billing/#billinghistory">History</a></li>
+                <li class="nav-item"><a href="#" class="active" data-toggle="list">全部提醒</a></li>
+                <li class="nav-item"><a href="#" data-toggle="list">系统</a></li>
+                <li class="nav-item"><a href="#" data-toggle="list">私信</a></li>
+                <li class="nav-item"><a href="#" data-toggle="list">评论回复</a></li>
             </ul>
         </div>
     </div>
@@ -77,7 +77,26 @@
 </div>
 <div class="content-menu-line"></div>
 <div class="content-body">
-
+    <div class="panel panel-default">
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="media-heading">
+        <b>系统消息</b><p class="pull-right">2019-06-04 17:27:52</p>、
+                        </div>
+                        <div class="media-body"><p>您好，由于最近大规模封锁，为了您能够更稳定的访问国际网络。<br>
+        已经为您的账号更换了新协议【VMess】端口号：8080 ，您的所有设备都需要重新下载客户端并按教程设置。<br>
+        可以点击【怎么使用？】按钮，按教程下载客户端并设置。<br>
+        提醒：一定！一定！一定，要重新下载客户端哦，之前的客户端无法兼容新协议。<br>
+        有任何问题可以提交工单或联系客服，祝您有美好的一天！<br>
+        查看工单：<a href="https://letslook.net/" target="_blank" rel="noreferrer noopener">https://letslook.net/</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="static/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
 <script src="static/bootstrap/4.3.1/js/bootstrap.bundle.js"></script>

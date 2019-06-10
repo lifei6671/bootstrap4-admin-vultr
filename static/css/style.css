@@ -164,7 +164,9 @@ select{
     text-decoration: none;
     font-family: "Raleway"
 }
-
+.dropdown-profile a.dropdown-item>i{
+    padding-right: 5px;
+}
 .dropdown-profile a.dropdown-item:hover {
     color: #3ba3ff
 }
